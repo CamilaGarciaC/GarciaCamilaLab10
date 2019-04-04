@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[2]:
 
 
 import urllib
@@ -15,7 +15,7 @@ import pandas as pd
 import scipy.signal as signal
 
 
-# In[2]:
+# In[3]:
 
 
 datos1= pd.read_csv("https://raw.githubusercontent.com/ComputoCienciasUniandes/FISI2029-201910/master/Seccion_2/Fourier/Datos/transacciones2008.txt",sep=";",header=None, names= ["A","B","C","D"])
@@ -27,7 +27,7 @@ sol1=datos1["A"]
 print(datos1)
 
 
-# In[3]:
+# In[4]:
 
 
 datos2["A"]= datos2["A"].astype(str).str[:-7]
@@ -35,7 +35,7 @@ datos2["B"]=datos2["B"].astype(str).str[11:]
 print(datos2)
 
 
-# In[4]:
+# In[5]:
 
 
 datos3= pd.read_csv("https://raw.githubusercontent.com/ComputoCienciasUniandes/FISI2029-201910/master/Seccion_2/Fourier/Datos/transacciones2010.txt",sep=";",header=None, names= ["A","B","C","D"])
@@ -56,6 +56,17 @@ print(final)
 
 
 final.to_csv("DatosFinales.csv")
+
+
+# In[ ]:
+
+
+data= pd.read_csv('DatosFinales.csv')
+
+plt.figure(figsize=(20,7))
+plt.plot(data["A"],data["D"])
+plt.xticks(rotation=70)
+plt.show()
 
 
 # In[ ]:
