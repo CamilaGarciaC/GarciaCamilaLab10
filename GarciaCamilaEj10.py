@@ -58,19 +58,6 @@ print(final)
 final.to_csv("DatosFinales.csv")
 
 
-# In[ ]:
-
-
-data= pd.read_csv('DatosFinales.csv')
-
-plt.figure(figsize=(20,7))
-plt.plot(data["A"],data["D"])
-plt.xticks(rotation=70)
-plt.show()
-
-
-# In[ ]:
-
 
 
 
